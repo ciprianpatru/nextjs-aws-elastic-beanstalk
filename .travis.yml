@@ -12,7 +12,7 @@ deploy:
       secure: ${AWS_SECRET_ACCESS_KEY}
     region: "eu-west-1"
     app: "nextjs-aws-app"
-    env: "nextjs-aws-ap-staging"
+    env: "NextjsAwsApp-env"
     bucket_name: ${AWS_S3_BUCKET} 
     on:
       branch: "staging"
@@ -23,7 +23,7 @@ deploy:
       secure: ${AWS_SECRET_ACCESS_KEY}
     region: "eu-west-1"
     app: "next-app"                     
-    env: "nextjs-aws-app-production"
+    env: "NextjsAwsApp-env-production"
     bucket_name: ${AWS_S3_BUCKET}
     on:
       branch: "master"
