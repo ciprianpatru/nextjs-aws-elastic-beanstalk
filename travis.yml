@@ -1,6 +1,6 @@
 language: node_js
 node_js:
- - "11.6.0"
+ - "12.18.3"
 branches:
   only:
   - staging
@@ -10,9 +10,9 @@ deploy:
     access_key_id: ${AWS_ACCESS_KEY_ID}
     secret_access_key:
       secure: ${AWS_SECRET_ACCESS_KEY}
-    region: "ap-south-1"       
-    app: "next-app"                     
-    env: "next-app-staging"                     
+    region: "eu-west-1"
+    app: "nextjs-aws-app"
+    env: "nextjs-aws-ap-staging"
     bucket_name: ${AWS_S3_BUCKET} 
     on:
       branch: "staging"
@@ -21,9 +21,9 @@ deploy:
     access_key_id: ${AWS_ACCESS_KEY_ID}
     secret_access_key:
       secure: ${AWS_SECRET_ACCESS_KEY}
-    region: "ap-south-1"       
+    region: "eu-west-1"
     app: "next-app"                     
-    env: "next-app-production"                     
+    env: "nextjs-aws-app-production"
     bucket_name: ${AWS_S3_BUCKET}
     on:
       branch: "master"
